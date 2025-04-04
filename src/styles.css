@@ -1,0 +1,59 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1em;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 12em;
+  height: 16em;
+  padding: 1em;
+  background-color: #ffe4c4;
+  box-shadow: 0.25em 0.25em #78b6ff;
+  color: #934f00;
+}
+
+.Card__Title {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Card__Title + .Card__Text {
+  margin-top: 0.5em;
+}
+
+.Card__Text {
+  margin: 0;
+  overflow: auto;
+}
+
+.Card--emphasized {
+  width: 24em;
+}
+
+.Card--emphasized > .Card__Title {
+  font-size: 3em;
+}
